@@ -4,11 +4,21 @@
 html{
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
     
 }
 
 body{
     font-family: "Nunito", sans-serif;
+}
+
+section{
+    min-height: 100vh;
+
+}
+
+:root{
+    --text-color: #000;
 }
 
 .navbar{
@@ -17,7 +27,11 @@ body{
     justify-content: space-between;
     padding: 30px 40px;
     align-items: center;
-    position: sticky;   
+    position: fixed; 
+    top: 0;          
+    left: 0;        
+    right: 0;        
+    z-index: 9999;  
 
 }
 .navbar-logo{
@@ -56,10 +70,10 @@ body{
 /* Home Section Code */
 
 .home{
-    min-height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
 }
 
 .home-img img{
@@ -78,6 +92,7 @@ body{
 
 .home-content{
     margin-left: 4rem;
+    
 }
 
 .home-content h3{
@@ -139,6 +154,200 @@ span{
     color: white;
 }
 
-.btn:hover{
+.home-content .btn:hover{
     box-shadow: 0 0 1.6rem;
+}
+
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-content{
+    padding: 0 4rem;
+}
+
+.about-img img{
+    display: flex;
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(#222831);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.about-img img:hover{
+        box-shadow: 0 0 25px;
+}
+
+
+.heading{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.about-content h1{
+    text-align: left;
+    font-size: 4rem;
+}
+
+.about-content h3{
+    font-size: 4rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+
+}
+
+.education{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.education-content h2{
+    margin: 5rem;
+    margin-bottom: 4rem;
+}
+
+.service-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-container .service-box{
+    flex: 1 1 20rem;
+    background-color: #424874;
+    padding: 5rem 2rem 5rem;
+    border-radius: 2rem;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.education-content .service-box:hover{
+    border-color: #424874;
+    transform: scale(1.02);
+}
+.service-box i{
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-box h3{
+    font-size: 1.2rem;
+    margin: 5px;
+}
+
+.service-box p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.service-box .btn{
+    border-radius: 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 300;
+}
+
+.service-box .btn:hover{
+    transform: scale(1.05);
+}
+
+.experience{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-img img{
+    background-color: #424874;
+    display: flex;
+    box-shadow: 0 0 40px var(#222831);
+    width: 25vw;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s ease;
+    padding: 20px;
+
+}
+
+.experience-img img:hover{
+    box-shadow: 0 0 25px;
+}
+
+.experience-content{
+    margin-left: 4rem;
+}
+
+.experience-content h2{
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.experience-content h3{
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.experience-content h1{
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.experience-content p{
+    font-size: 1.6rem;
+}
+
+.footer{
+    border: 1px solid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px 0;
+    background-color: #434E78;
+}
+
+.footer  .social{
+    text-align: center;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+.footer .social a{
+    font-size: 25px;
+    color: #28283E;
+    border: 2px solid;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+    transition: 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-5px);
+    background-color: #28283E;
+    color: #28283E;
+    box-shadow: 0 0 25px;
+}
+
+.footer .copyright{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color:  #28283E;
 }
